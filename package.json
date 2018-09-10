@@ -1,0 +1,19 @@
+{
+  "name": "js-object-to-php-array",
+  "version": "1.0.0",
+  "description": "Convert JS object to PHP array syntax",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/riyunoa/js-object-to-php-array.git"
+  },
+  "author": "Gillian Ng",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/riyunoa/js-object-to-php-array/issues"
+  },
+  "homepage": "https://github.com/riyunoa/js-object-to-php-array#readme",
+  "dependencies": {
+    "lodash": "^3.10.1"
+  }
+}
