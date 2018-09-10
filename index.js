@@ -1,7 +1,8 @@
 const map = require('lodash/collection/map');
 const isObject = require('lodash/lang/isObject');
 const isArray = require('lodash/lang/isArray');
-const isNil = require('lodash/lang/isNil');
+const isUndefined = require('lodash/lang/isUndefined');
+const isNull = require('lodash/lang/isNull');
 
 /**
  * Convert a js object to PHP array for export
@@ -9,8 +10,7 @@ const isNil = require('lodash/lang/isNil');
  * @returns {string}
  */
 const jsObjectToPhpArray = (item) => {
-    // if the item is undefined or null
-    if (isNil(item)) {
+    if (isUndefined(item) || isNull(item)) {
         return '\'\'';
     }
 
