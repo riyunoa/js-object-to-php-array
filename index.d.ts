@@ -1,0 +1,1 @@
+export function jsObjectToPhpArray(item: any): string;
