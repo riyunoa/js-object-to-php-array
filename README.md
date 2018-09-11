@@ -1,10 +1,49 @@
 # JsObjectToPhpArray
-Convert JS object to a string in PHP array format
+Convert Javascript object to a string in PHP array format
 
-# Usage
+## Usage
 ```
 import { jsObjectToPhpArray } from 'js-object-to-php-array';
 
-let foo = []; // array of objects to convert to PHP array format
-let result = jsObjectToPhpArray(foo);
+let obj = {
+    items: [
+        {
+            cat: 'meow'
+        },
+        {
+            dog: 'woof'
+        }
+    ]
+};
+
+console.log(jsObjectToPhpArray(obj));
+```
+
+## Example input and output
+Input (Javascript object)
+```
+{
+    items: [
+        {
+            cat: 'meow'
+        },
+        {
+            dog: 'woof'
+        }
+    ]
+};
+```
+
+Output
+```
+[
+    'items' => [
+        [
+            'cat' => 'meow'
+        ],
+        [
+            'dog' => 'woof'
+        ]
+    ]
+]
 ```
