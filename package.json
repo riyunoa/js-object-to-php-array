@@ -13,7 +13,18 @@
     "url": "https://github.com/riyunoa/js-object-to-php-array/issues"
   },
   "homepage": "https://github.com/riyunoa/js-object-to-php-array#readme",
-  "dependencies": {
+  "scripts": {
+    "build": "rollup -c"
+  },
+  "peerDependencies": {
     "lodash": "^3.10.1"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-plugin-external-helpers": "^6.22.0",
+    "babel-preset-env": "^1.7.0",
+    "rollup": "^0.65.2",
+    "rollup-plugin-babel": "^3.0.7",
+    "rollup-plugin-node-resolve": "^3.4.0"
   }
 }

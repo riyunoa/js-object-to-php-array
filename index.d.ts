@@ -1,1 +1,1 @@
-export function jsObjectToPhpArray(item: any): string;
+export declare function jsObjectToPhpArray(item: any): string;
