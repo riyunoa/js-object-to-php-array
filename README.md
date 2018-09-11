@@ -47,3 +47,8 @@ Output
     ]
 ]
 ```
+
+## Making changes to the source
+```
+npm run build
+```

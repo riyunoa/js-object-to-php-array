@@ -33,12 +33,17 @@
 
         // Otherwise, the item is a string.
         // If there is the single quotes character in the string, then surround it with double quotes.
-        var itemStr = item.toString();
-        if (itemStr.indexOf('\'') !== -1) {
-            return '\"' + itemStr + '\"';
+        var itemIsString = lodash.isString(item);
+
+        if (itemIsString && item.indexOf('\'') !== -1) {
+            return '\"' + item + '\"';
         }
 
-        return '\'' + itemStr + '\'';
+        if (itemIsString) {
+            return '\'' + item + '\'';
+        }
+
+        return item;
     }
 
     exports.jsObjectToPhpArray = convert;

@@ -1,4 +1,4 @@
-import { map, isObject, isArray, isNil } from 'lodash';
+import { map, isObject, isArray, isNil, isString } from 'lodash';
 
 /**
  * Convert a js object to PHP array for export
@@ -29,10 +29,15 @@ export default function convert(item) {
 
     // Otherwise, the item is a string.
     // If there is the single quotes character in the string, then surround it with double quotes.
-    let itemStr = item.toString();
-    if (itemStr.indexOf('\'') !== -1) {
-        return '\"' + itemStr + '\"';
+    let itemIsString = isString(item);
+
+    if (itemIsString && item.indexOf('\'') !== -1) {
+        return '\"' + item + '\"';
     }
 
-    return '\'' + itemStr + '\'';
+    if (itemIsString) {
+        return '\'' + item + '\'';
+    }
+
+    return item;
 };
