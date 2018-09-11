@@ -39,5 +39,5 @@ export default function convert(item) {
         return '\'' + item + '\'';
     }
 
-    return item;
+    return item.toString();
 };
