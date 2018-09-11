@@ -11,7 +11,7 @@
      */
 
     function convert(item) {
-        if (lodash.isUndefined(item) || lodash.isNull(item)) {
+        if (lodash.isNil(item)) {
             return '\'\'';
         }
 

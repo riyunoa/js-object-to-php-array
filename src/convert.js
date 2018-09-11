@@ -1,4 +1,4 @@
-import { map, isObject, isArray, isUndefined, isNull } from 'lodash';
+import { map, isObject, isArray, isNil } from 'lodash';
 
 /**
  * Convert a js object to PHP array for export
@@ -7,7 +7,7 @@ import { map, isObject, isArray, isUndefined, isNull } from 'lodash';
  */
 
 export default function convert(item) {
-    if (isUndefined(item) || isNull(item)) {
+    if (isNil(item)) {
         return '\'\'';
     }
 
